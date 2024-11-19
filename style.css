@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat&display=swap");
+
+body {
+	margin: 0;
+	padding: 0 24px;
+	background: #786268;
+	color: #fff;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	font-family: "Kanit", sans-serif;
+}
+
+.wrapper {
+	height: 550px;
+	width: 240px;
+	background: #292929;
+	position: relative;
+	border-radius: 8px;
+	box-shadow: -5px -5px 20px 5px rgba(255, 255, 255, 0.08),
+		5px 5px 20px 5px rgba(0, 0, 0, 0.5),
+		-1px -1px 0px 0px rgba(255, 255, 255, 0.2),
+		1px 1px 0px 0px rgba(0, 0, 0, 0.4);
+	background: linear-gradient(120deg, #333333 0%, #dd1818 100%);
+}
+
+.wrapper:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background: #fff;
+	display: block;
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	margin: -1px;
+	top: 0;
+	border-radius: 8px;
+	background: linear-gradient(120deg, #4f6579 0%, #312e40 100%);
+}
+
+.result,
+.convert__input,
+.converted__result,
+.fromSelect,
+.toSelect,
+.convert_option {
+	width: 100%;
+	height: 42px;
+	font-family: "Kanit", sans-serif;
+	color: #fdbb2d;
+	line-height: 40px;
+	font-size: 18px;
+	font-weight: 300;
+	outline: none;
+	border: none;
+	margin: 0;
+	background: none;
+	border-bottom: 1px dotted #fdbb2d;
+	box-sizing: border-box;
+	text-align: right;
+	padding: 0 20px;
+}
+
+.numbers {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	height: calc(80% - 42px - 80px);
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.numbers > button {
+	width: auto;
+	height: auto;
+	background: #fff0;
+	border: none;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+}
+
+.numbers > button:after {
+	position: relative;
+	color: #fff;
+}
+
+.numbers > button:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	content: "";
+	display: block;
+	height: 40px;
+	width: 40px;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	background: rgba(215, 45, 45, 0.7);
+	opacity: 0.5;
+	transition: 300ms;
+	font-family: "Kanit", sans-serif;
+}
+
+.numbers > button:hover:before {
+	opacity: 1;
+}
+
+.operator[isOperator]::after {
+	content: "" attr(isOperator);
+}
+.operator[isNum]::after {
+	content: "" attr(isNum);
+}
+.operator[isOperator]:before {
+	background-color: #fdbb2d;
+	opacity: 0.5;
+}
+
+.convert_option_from,
+.convert_option_to {
+	display: none;
+	width: auto;
+	height: auto;
+	background: #292929;
+	font-family: "Kanit", sans-serif;
+	line-height: 28px;
+	font-size: 14px;
+	border-top: none;
+}
+.fromSelect,
+.toSelect {
+	display: block;
+	cursor: pointer;
+}
+.fromSelect__container,
+.toSelect__container {
+	position: fixed;
+	z-index: 1000;
+	display: none;
+	width: 240px;
+	height: auto;
+}
+
+.convert_option_from,
+.convert_option_to {
+	display: inline-block;
+	width: 200px;
+	padding: 0 20px;
+	color: #fdbb2d;
+	border: none;
+	border-top: 1px dotted #fdbb2d;
+	outline: none;
+	cursor: pointer;
+	background: linear-gradient(120deg, #333333 0%, #dd1818 100%);
+}
+.show {
+	display: block;
+}
+.fromSelect:hover,
+.toSelect:hover,
+.convert_option_from:hover,
+.convert_option_to:hover {
+	background: rgb(133, 16, 3);
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<input class="result" type="text" />
+
+			<div class="numbers">
+				<button isOperator="C" class="operator"></button>
+				<button isOperator="<" class="operator"></button>
+				<button isOperator="=" class="operator"></button>
+				<button isOperator="*" class="operator"></button>
+
+				<button isNum="7" class="operator"></button>
+				<button isNum="8" class="operator"></button>
+				<button isNum="9" class="operator"></button>
+				<button isOperator="/" class="operator"></button>
+
+				<button isNum="4" class="operator"></button>
+				<button isNum="5" class="operator"></button>
+				<button isNum="6" class="operator"></button>
+				<button isOperator="-" class="operator"></button>
+
+				<button isNum="1" class="operator"></button>
+				<button isNum="2" class="operator"></button>
+				<button isNum="3" class="operator"></button>
+				<button isOperator="+" class="operator"></button>
+
+				<button isNum="0" class="operator"></button>
+				<button isOperator="(" class="operator"></button>
+				<button isOperator="." class="operator"></button>
+				<button isOperator=")" class="operator"></button>
+			</div>
+			<input class="fromSelect" value="From" />
+			<input class="convert__input" type="text" />
+			<div class="fromSelect__container"></div>
+			<input class="converted__result" type="text" />
+			<div class="toSelect__container">To</div>
+			<input class="toSelect" value="To" />
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="converter.js"></script>
+	</body>
+</html>
