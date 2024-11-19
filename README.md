@@ -2,4 +2,4 @@
 
 ## To visit [<span style="color:red">Calculator](https://ekaterina-2022.github.io/Calculator/ "Click me")</span>
 
-![Calculator](Calculator.png)
+![Calculator](calc.png)
